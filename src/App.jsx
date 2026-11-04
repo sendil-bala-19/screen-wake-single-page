@@ -1,13 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import "./App.css";
+import React from "react";
+import "./App.less";
+import Content from "./components/Content";
 
 function App() {
   return (
-    <>
-      <h1>Vite + React</h1>
-    </>
+    <React.Fragment>
+      <h1>No Sleep App</h1>
+      <Content />
+    </React.Fragment>
   );
 }
 
