@@ -1,0 +1,46 @@
+@page: #f2f4ed;
+@ink: #193b34;
+@muted: #63736c;
+@accent: #bd563b;
+@surface: #fffefa;
+@line: #d7dfd7;
+
+:root {
+  color-scheme: light;
+  color: @ink;
+  background-color: @page;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --page: @page;
+  --ink: @ink;
+  --muted: @muted;
+  --accent: @accent;
+  --surface: @surface;
+  --line: @line;
+}
+
+body {
+  display: grid;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  place-items: center;
+  background: linear-gradient(135deg, #f8f7ef 0%, @page 58%, #eaf0e8 100%);
+}
+
+a {
+  color: @accent;
+}
+
+a:hover {
+  color: #8f402d;
+}
+
+::selection {
+  color: @surface;
+  background: @ink;
+}

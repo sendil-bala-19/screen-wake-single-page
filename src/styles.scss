@@ -1,0 +1,93 @@
+$focus: #267a69;
+
+h1 {
+  margin: 1.4rem 0 1rem;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+#root .logo {
+  box-sizing: content-box;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  filter: none;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+#root .logo:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 20px rgb(25 59 52 / 10%);
+}
+
+#root .card {
+  max-width: 30rem;
+  margin: 1.5rem auto 0;
+  padding: 1.75rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgb(255 254 250 / 78%);
+  box-shadow: 0 12px 32px rgb(25 59 52 / 7%);
+}
+
+#root .card button {
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--surface);
+  font-size: 1rem;
+  font-weight: 600;
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease;
+}
+
+#root .card button:hover {
+  transform: translateY(-1px);
+  border-color: #963f2b;
+  background: #963f2b;
+}
+
+#root .card button:focus-visible {
+  outline: 3px solid $focus;
+  outline-offset: 3px;
+}
+
+#root .card p,
+#root .read-the-docs {
+  color: var(--muted);
+}
+
+#root code {
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  background: #e8eee8;
+  color: var(--ink);
+}
+
+@media (max-width: 560px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  #root .card {
+    padding: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #root .logo,
+  #root .card button {
+    transition: none;
+  }
+}
